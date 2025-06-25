@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MoneyMaster - Manajemen Keuangan</title>
+    <title>VierMonster</title>
+    <link rel="icon" type="image/png" href="assets/dompet.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&display=swap"
@@ -773,8 +774,8 @@
 <body>
     <div class="container">
         <header>
-            <h1><i class="fas fa-coins"></i> MoneyMaster Pro</h1>
-            <p>Kelola keuangan Anda dengan pengalaman 3D profesional yang memukau</p>
+            <h1><i class="fas fa-coins"></i> VierMonster</h1>
+            <p>Kelola keuangan Anda dengan Aman dan teratur bersama VierMonster</p>
         </header>
 
         <div class="summary-cards">
@@ -793,6 +794,7 @@
                 <div class="card-value" id="total-balance">Rp0</div>
             </div>
         </div>
+        
 
         <div class="form-container">
             <div class="form-header">
@@ -812,12 +814,12 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="type"><i class="fas fa-exchange-alt"></i> Jenis Transaksi</label>
-                        <select id="type">
-                            <option value="income">Pemasukan</option>
-                            <option value="expense">Pengeluaran</option>
-                        </select>
-                    </div>
+    <label for="type" style="color: #ffffff;"><i class="fas fa-exchange-alt"></i> Jenis Transaksi</label>
+    <select id="type" style="color: rgb(114, 111, 111);">
+        <option value="income">Pemasukan</option>
+        <option value="expense">Pengeluaran</option>
+    </select>
+</div>
 
                     <div class="form-group">
                         <label for="date"><i class="fas fa-calendar"></i> Tanggal</label>
@@ -864,15 +866,41 @@
                 <h2><i class="fas fa-list"></i> Daftar Transaksi</h2>
             </div>
 
-            <div id="empty-state" class="empty-state" style="display: none;">
-                <i class="fas fa-file-invoice-dollar"></i>
-                <h3>Tidak Ada Transaksi</h3>
-                <p>Mulai dengan menambahkan transaksi pemasukan atau pengeluaran baru.</p>
-                <button onclick="document.querySelector('.form-container').scrollIntoView({behavior: 'smooth'})"
-                    style="margin-top: 20px;">
-                    <i class="fas fa-plus"></i> Tambah Transaksi
-                </button>
-            </div>
+           <div id="empty-state" class="empty-state" style="display: none; text-align: center; padding: 2rem; max-width: 480px; margin: 0 auto;">
+    <div style="font-size: 3.5rem; color: #4a6cf7; margin-bottom: 1.25rem;">
+        <i class="fas fa-file-invoice-dollar"></i>
+    </div>
+    <h3 style="font-size: 1.375rem; font-weight: 700; color: #2d3748; margin-bottom: 0.75rem;">BELUM ADA TRANSAKSI</h3>
+    <p style="color: #718096; margin-bottom: 1.75rem; line-height: 1.5; font-size: 0.9375rem;">
+        Mulai kelola keuangan Anda dengan mencatat transaksi pertama
+    </p>
+    <button 
+        onclick="document.querySelector('.form-container').scrollIntoView({behavior: 'smooth'})"
+        style="
+            background: #4a6cf7;
+            color: white;
+            border: none;
+            padding: 0.75rem 3rem;
+            border-radius: 6px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 8px rgba(74, 108, 247, 0.2);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+            width: auto;
+            min-width: 280px;
+        "
+        onmouseover="this.style.background='#3a5bef'; this.style.boxShadow='0 4px 12px rgba(74, 108, 247, 0.3)'"
+        onmouseout="this.style.background='#4a6cf7'; this.style.boxShadow='0 2px 8px rgba(74, 108, 247, 0.2)'"
+    >
+        <i class="fas fa-plus-circle" style="font-size: 1.1em;"></i>
+        <span>TAMBAH TRANSAKSI</span>
+    </button>
+</div>
 
             <table>
                 <thead>
@@ -893,21 +921,21 @@
 
         <footer>
             <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/deefacell_/"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/dfirla-apriliani-bb7260316/"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/dfirlaapriliani"><i class="fab fa-github"></i></a>
             </div>
 
-            <div class="footer-links">
-                <a href="#"><i class="fas fa-info-circle"></i> Tentang Kami</a>
-                <a href="#"><i class="fas fa-envelope"></i> Kontak</a>
-                <a href="#"><i class="fas fa-shield-alt"></i> Privasi</a>
-                <a href="syarat.html"><i class="fas fa-file-alt"></i> Syarat & Ketentuan</a>
-            </div>
+           <div class="footer-links flex justify-center md:justify-start items-center gap-3 text-sm md:text-base mt-4">
+  <a href="mailto:dfirlaapriliani@gmail.com" class="flex items-center gap-2 text-gray-700 hover:text-blue-600 transition duration-300">
+    <i class="fas fa-envelope"></i>
+    <span>Kontak</span>
+  </a>
+</div>
 
-            <p>MoneyMaster Pro - Manajemen Keuangan 3D</p>
+
+            <p>VierMonster - Create by Firla</p>
+             <p>Semangat mengelola keuangannya All</p>
             <p>&copy; 2023 Hak Cipta Dilindungi. Dibuat dengan ❤️ untuk pengelolaan keuangan yang lebih baik.</p>
         </footer>
     </div>
